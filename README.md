@@ -46,7 +46,7 @@ server on `dev.example.com`.
 
 ## Install
 
-With Go 1.22 or newer:
+With Go 1.24 or newer:
 
 ```sh
 go install github.com/shenyizg/berth/cmd/berth@latest

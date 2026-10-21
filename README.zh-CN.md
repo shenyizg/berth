@@ -40,7 +40,7 @@ berth: forwarded remote port 5173 to localhost:5173
 
 ## 安装
 
-使用 Go 1.22 或更新版本：
+使用 Go 1.24 或更新版本：
 
 ```sh
 go install github.com/shenyizg/berth/cmd/berth@latest
