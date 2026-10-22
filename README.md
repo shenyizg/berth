@@ -52,9 +52,19 @@ With Go 1.24 or newer:
 go install github.com/shenyizg/berth/cmd/berth@latest
 ```
 
+This puts `berth` in `~/go/bin` (more precisely, `$(go env GOPATH)/bin`). If
+your shell then says `command not found`, add that directory to your `PATH` in
+your shell's startup file, such as `~/.zshrc` or `~/.bashrc`, and open a new
+terminal:
+
+```sh
+export PATH="$PATH:$HOME/go/bin"
+```
+
 You can also download a binary from the
-[releases page](https://github.com/shenyizg/berth/releases), or build from a
-clone of this repository with `make build`.
+[releases page](https://github.com/shenyizg/berth/releases) and put it in a
+directory on your `PATH`, or build from a clone of this repository with
+`make build`.
 
 berth needs the OpenSSH client on your machine: macOS, Linux, the BSDs and WSL
 all work. (The Windows port of OpenSSH lacks connection sharing.) The server

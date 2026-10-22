@@ -46,8 +46,16 @@ berth: forwarded remote port 5173 to localhost:5173
 go install github.com/shenyizg/berth/cmd/berth@latest
 ```
 
+`berth` 会被安装到 `~/go/bin`（准确地说是 `$(go env GOPATH)/bin`）。如果之后 shell
+提示 `command not found`，就把这个目录加进 `PATH`：在 shell 的启动文件（如
+`~/.zshrc` 或 `~/.bashrc`）里加入下面这一行，然后打开一个新终端：
+
+```sh
+export PATH="$PATH:$HOME/go/bin"
+```
+
 也可以从 [Releases 页面](https://github.com/shenyizg/berth/releases) 下载预编译的
-二进制文件，或者克隆本仓库后执行 `make build`。
+二进制文件，放到 `PATH` 里的某个目录中；或者克隆本仓库后执行 `make build`。
 
 本机需要 OpenSSH 客户端，macOS、Linux、各种 BSD 和 WSL 都可以。（Windows 版
 OpenSSH 不支持连接共享。）服务器需要有 `/bin/sh`，并允许 TCP 转发，这也是默认配置。
